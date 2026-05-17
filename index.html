@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rhythm Drop</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="background-glow"></div>
+  <div class="stars"></div>
+
+  <main class="app">
+    <section id="homeScreen" class="screen active">
+      <h1>Rhythm Drop</h1>
+      <p class="subtitle">
+        Hit the correct arrow inside the <strong>detected zone</strong> exactly with the song.
+      </p>
+
+      <div class="card">
+        <label for="songSelect">Choose Song</label>
+        <select id="songSelect"></select>
+        <div class="home-buttons">
+          <button id="randomSongBtn" class="secondary">Pick Random Song</button>
+          <button id="startBtn" class="primary">Start Game</button>
+        </div>
+      </div>
+
+      <div class="legend">
+        <span>Controls:</span>
+        <kbd>&larr;</kbd>
+        <kbd>&uarr;</kbd>
+        <kbd>&rarr;</kbd>
+        <kbd>&darr;</kbd>
+      </div>
+    </section>
+
+    <section id="gameScreen" class="screen">
+      <header class="hud">
+        <div>Song: <span id="currentSongName">-</span></div>
+        <div>Score: <span id="scoreValue">0</span></div>
+        <div>Success: <span id="successValue">0%</span></div>
+        <div>Combo: <span id="comboValue">0</span></div>
+      </header>
+
+      <div id="playfield" class="playfield">
+        <div class="lane lane-left">←</div>
+        <div class="lane lane-up">↑</div>
+        <div class="lane lane-right">→</div>
+        <div class="lane lane-down">↓</div>
+        <div id="notesLayer" class="notes-layer"></div>
+        <div id="detectZone" class="detect-zone">
+          <span>Detected Zone</span>
+        </div>
+      </div>
+
+      <div class="status-row">
+        <div id="judgementText" class="judgement">Ready</div>
+        <button id="backHomeBtn" class="secondary">Home</button>
+      </div>
+    </section>
+  </main>
+
+  <div id="resultModal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <h2>Song Finished!</h2>
+      <p>Total Score: <strong id="finalScore">0</strong></p>
+      <p>Successful Hits: <strong id="finalPercent">0%</strong></p>
+      <div class="result-buttons">
+        <button id="retryBtn" class="primary">Retry</button>
+        <button id="homeBtn" class="secondary">Home</button>
+      </div>
+    </div>
+  </div>
+
+  <audio id="songAudio" preload="auto"></audio>
+  <script src="./script.js"></script>
+</body>
+</html>
