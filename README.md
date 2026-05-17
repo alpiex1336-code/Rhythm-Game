@@ -1,11 +1,11 @@
-# Rhythm Drop v1 (alpiex)
+# Rhythm Drop v1 (alpiex1336-code)
 
 ## Quick Start (Download and Play)
 
 After downloading this folder, open Terminal and run:
 
 ```bash
-cd "$HOME/Downloads/rhythm-drop-v1-alpiex" && (python3 -m http.server 8000 || python -m http.server 8000 || npx serve . -l 8000)
+cd "$HOME/Downloads/rhythm-drop-v1-alpiex1336-code" && (python3 -m http.server 8000 || python -m http.server 8000 || npx serve . -l 8000)
 ```
 
 Then open:
