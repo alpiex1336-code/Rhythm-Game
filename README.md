@@ -2,10 +2,19 @@
 
 ## Quick Start (Download and Play)
 
-After downloading this folder, open Terminal and run:
+Use a terminal **inside the project folder**:
+
+- **Git clone** — folder name is `Rhythm-Game`:
+  ```bash
+  git clone git@github.com:alpiex1336-code/Rhythm-Game.git
+  cd Rhythm-Game
+  ```
+- **ZIP from GitHub** — after unzipping, the folder is usually `Rhythm-Game-main`.
+
+Then start a local server from that folder:
 
 ```bash
-cd "$HOME/Downloads/rhythm-drop-v1-alpiex1336-code" && (python3 -m http.server 8000 || python -m http.server 8000 || npx serve . -l 8000)
+python3 -m http.server 8000 || python -m http.server 8000 || npx serve . -l 8000
 ```
 
 Then open:
